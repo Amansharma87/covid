@@ -1,0 +1,130 @@
+h1{
+    text-align: center;
+    font-size: 300%;
+    margin: 0px;
+    text-decoration-line:  underline;
+    text-decoration-color:  orange;
+    text-decoration-style: solid;
+    
+   
+/* h2{
+    font-size: 150%;
+    margin-left: 25%;*/
+    
+} 
+h2{
+    text-align: center;
+    font-size: 200%;
+    text-decoration-line:  underline;
+    text-decoration-color:  orange;
+    text-decoration-style: solid;
+    margin-bottom: 30px;
+}
+h3{
+    /* margin-left: 10%; */
+    margin-top:30px ;
+}
+.box1a{
+    display: flex;
+    margin-left:25%;
+    width: 50%;
+}
+li{
+    list-style: none;
+    margin-bottom: 5%;
+}
+ul{
+    width: 50%;
+    font-size: 200%;
+}
+ul:second-child{
+    margin-right: 10%;
+}
+body{
+    background:url(3.jpg);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-position: center;
+    color:gainsboro;
+    background-size: cover;
+    padding-bottom: 35px;
+    padding: 10%;
+
+}
+table,th,td{
+    border: 1px solid orange;
+    border-style: double;
+    border-collapse: collapse;
+    background-color:#D0D0D0;
+    color: black;
+    font-weight: lighter;
+}
+table{
+    border-width: 5px;
+    width: 100%;
+}
+
+.t1{
+    /* width:80%; */
+    text-align: left;
+    font-size: 4vh;
+    
+    border-style: solid;
+    border-width: 2px;
+    box-shadow:10px 10px 5px black;
+    transition: transform 1s;
+}
+table:hover{
+   transform: scale(1.05);
+}
+th{
+    width:50%;
+}
+
+form{
+    margin-top: 40px;
+    /* margin-left: 10%; */
+    margin-bottom: 50px;
+}
+select{
+    height: 30px;
+    color: orange;
+    background: grey;
+    font-size: large;
+    font-weight: bolder ;
+    transition: transform 1s;
+    margin-bottom: 20px;
+}
+select:hover{
+    transform: scale(1.05);
+}
+.submit{
+    margin-left:2%;
+    height: 30px;
+    width:100px;
+    background-color: darkorange;
+    color:white;
+    font-size: large;
+    border: none;
+    box-shadow: 3px 3px 3px black;
+     transition: transform .2s;
+}
+.submit:hover{
+    transform:scale(1.1);
+}
+.flag{
+    
+    height:20vh;
+    margin-bottom: 50px;
+    
+}
+.h{
+    text-align: initial;
+    margin-left: 5px;
+}
+.im{
+    width: 30%;
+}
+.i2{
+    width: 200px;
+    height: 200px;
+}

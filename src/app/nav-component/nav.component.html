@@ -1,0 +1,116 @@
+<body>
+<h1>Covid-19 Tracker</h1>
+<div class=box1 >
+<h2>Cases Worldwide</h2>
+<!-- <img  class="i1"src="5.jpg" alt="An error occured"> -->
+<!-- <div class="box1a"> -->
+    <table class="t1">
+        <tr>
+            <th>Total No.of Cases</th>
+            <td>{{ data2.cases }} </td>
+        </tr>
+        <tr>
+            <th>Cases Today</th>
+            <td>{{data2.todayCases}}</td>
+        </tr>
+        <tr>
+            <th>Deaths till now</th>
+            <td>{{ data2.deaths }} </td>
+        </tr>
+        <tr>
+            <th>Active Cases</th>
+            <td>{{ data2.active }} </td>
+        </tr>
+        <tr>
+            <th>Critical cases</th>
+            <td>{{ data2.recovered }} </td>
+        </tr>
+        <tr>
+            <th>Cases per million</th>
+            <td>{{ data2.casesPerOneMillion  }} </td>
+        </tr>
+        <tr>
+            <th>Deaths per million</th>
+            <td>{{ data2.deathsPerOneMillion }} </td>
+        </tr>
+        <tr>
+            <th>Total tests conducted</th>
+            <td>{{ data2.tests }} </td>
+        </tr>
+        <tr>
+            <th>Test per million</th>
+            <td>{{ data2.testsPerOneMillion }} </td>
+        </tr>
+        <tr>
+            <th>No. of affected countries</th>
+            <td>{{ data2.affectedCountries }} </td>
+        </tr>
+    </table>
+</div>
+<h3 >Find any Country's status here.</h3>
+<form class="form" #f="ngForm" (ngSubmit)="find(f.value.country)" >
+<select ngModel name="country"  >
+    <option *ngFor ="let c of data" [value]="c.country">{{  c.country }}</option>
+    
+</select>
+<button class="submit"type="submit">Submit</button>
+</form>
+<div class="box2"*ngIf="s" >
+    <h2 class="h">{{ selected.country }}</h2>
+    <div class="im">
+    <img  class="flag"[src]="selected.countryInfo.flag" alt="An Error occured">
+  
+</div>
+<table class="t1">
+    <tr>
+        <th>Total No.of Cases</th>
+        <td>{{ selected.cases }} </td>
+    </tr>
+    <tr>
+        <th>Cases Today</th>
+        <td>{{selected.todayCases}}</td>
+    </tr>
+    <tr>
+        <th>Deaths till now</th>
+        <td>{{ selected.deaths }} </td>
+    </tr>
+    <tr>
+        <th>Active Cases</th>
+        <td>{{ selected.active }} </td>
+    </tr>
+    <tr>
+        <th>Critical cases</th>
+        <td>{{ selected.critical }} </td>
+    </tr>
+    <tr>
+        <th>Deaths Today</th>
+        <td>{{ selected.todayDeaths }} </td>
+    </tr>
+    <tr>
+        <th>Recovered</th>
+        <td>{{ selected.recovered }} </td>
+    </tr>
+    <tr>
+        <th>Cases per million</th>
+        <td>{{ selected.casesPerOneMillion  }} </td>
+    </tr>
+    <tr>
+        <th>Deaths per million</th>
+        <td>{{ selected.deathsPerOneMillion }} </td>
+    </tr>
+    <tr>
+        <th>Total tests conducted</th>
+        <td>{{ selected.tests }} </td>
+    </tr>
+    <tr>
+        <th>Test per million</th>
+        <td>{{ selected.testsPerOneMillion }} </td>
+    </tr>
+    <!-- <tr>
+        <th>No. of affected countries</th>
+        <td>{{ data2.affectedCountries }} </td>
+    </tr> -->
+</table>
+<!-- </div> -->
+</div>
+</body>
